@@ -4,6 +4,12 @@ No sign-up demo, fictional data only, replay mode (pre-recorded analyses).
 
 - **Live demo:** https://nyyoautomation.github.io/nyyo-syndics-demo/
 
+## Run locally
+
+Run locally: python3 -m http.server
+
+Run it from the repository root, then open http://localhost:8000 in your browser. Opening index.html directly (file://) shows an empty demo, because the browser blocks loading the data files.
+
 Three use cases, on one fictional building:
 
 1. **General meeting minutes** (main case): attendance sheet, proxies and meeting notes cross-checked against the bylaws and the notice; ownership shares and majorities recounted per resolution; draft minutes ready to review.
