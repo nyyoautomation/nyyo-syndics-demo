@@ -1,0 +1,430 @@
+{
+ "id": "rec",
+ "icon": "mail-warning",
+ "name": "Owner complaint reply",
+ "short": "Owner email → sourced reply",
+ "lead": "The complaint is cross-checked against the maintenance log, the bylaws, the building insurance policy and the service charge notice. You get an accurate, calm reply and the deadlines to meet; nothing is sent without you.",
+ "project": {
+  "title": "Leaks in unit 24 and a disputed service charge, Maple Court (fictional)",
+  "meta": [
+   [
+    "Owner",
+    "Ms Ines Garland (fictional), unit 24"
+   ],
+   [
+    "Received",
+    "Oct 5, 2026"
+   ],
+   [
+    "Documents checked",
+    "7"
+   ],
+   [
+    "Reply",
+    "To send"
+   ]
+  ],
+  "firm": "Belmont Property Management (fictional)"
+ },
+ "sources": [
+  {
+   "id": "S1",
+   "name": "Owner_Email_Oct5.eml",
+   "kind": "Owner's email",
+   "pages": 1,
+   "unit": "p."
+  },
+  {
+   "id": "S2",
+   "name": "Roofer_Report_Sep.pdf",
+   "kind": "Roofer's call-out report",
+   "pages": 2,
+   "unit": "p."
+  },
+  {
+   "id": "S3",
+   "name": "Bylaws.pdf",
+   "kind": "Association bylaws",
+   "pages": 64,
+   "unit": "p."
+  },
+  {
+   "id": "S4",
+   "name": "Building_Insurance_Policy.pdf",
+   "kind": "Building insurance, policy schedule",
+   "pages": 14,
+   "unit": "p."
+  },
+  {
+   "id": "S5",
+   "name": "Maintenance_Log.pdf",
+   "kind": "Building maintenance log",
+   "pages": 8,
+   "unit": "p."
+  },
+  {
+   "id": "S6",
+   "name": "Service_Charge_Q4.pdf",
+   "kind": "Q4 service charge notice",
+   "pages": 2,
+   "unit": "p."
+  },
+  {
+   "id": "S7",
+   "name": "Management_Agreement.pdf",
+   "kind": "Management agreement",
+   "pages": 12,
+   "unit": "p."
+  }
+ ],
+ "extracts": [
+  {
+   "id": "E1",
+   "src": "S1",
+   "page": 1,
+   "loc": "Message",
+   "text": "Third leak since June in my bedroom ceiling, under the flat roof. Nobody came. I refuse to pay the $1,240 of roof works billed this quarter until it is fixed."
+  },
+  {
+   "id": "E2",
+   "src": "S2",
+   "page": 1,
+   "loc": "Findings",
+   "text": "Call-out on Sep 18, 2026: roof membrane flashing detached around the skylight, above unit 24. Temporary repair; full replacement needed."
+  },
+  {
+   "id": "E3",
+   "src": "S3",
+   "page": 12,
+   "loc": "Clause 6 Common areas",
+   "text": "Common areas include the structure, roofs and flat roofs, including their waterproofing."
+  },
+  {
+   "id": "E4",
+   "src": "S4",
+   "page": 6,
+   "loc": "Water damage",
+   "text": "Leaks through the roof covered; deductible $1,500. Claims must be filed within 5 working days of becoming aware of the damage."
+  },
+  {
+   "id": "E5",
+   "src": "S5",
+   "page": 5,
+   "loc": "Works",
+   "text": "Flat roof waterproofing: temporary repair on Sep 18, 2026. No insurance claim recorded."
+  },
+  {
+   "id": "E6",
+   "src": "S6",
+   "page": 1,
+   "loc": "Unit 24",
+   "text": "Roof works charge (resolution 6 of the 2025 meeting): $1,240, due Oct 1, 2026."
+  },
+  {
+   "id": "E7",
+   "src": "S3",
+   "page": 40,
+   "loc": "Clause 30 Charges",
+   "text": "Each owner pays the charges billed and may not withhold them because of a defect in the common areas."
+  },
+  {
+   "id": "E8",
+   "src": "S5",
+   "page": 5,
+   "loc": "Reports",
+   "text": "Leaks reported in unit 24: Jun 14, 2026, Aug 2, 2026, Oct 5, 2026."
+  },
+  {
+   "id": "E9",
+   "src": "S7",
+   "page": 9,
+   "loc": "Clause 7.2",
+   "text": "The manager replies in writing to owners' complaints within 8 days."
+  }
+ ],
+ "steps": [
+  "Reading the complaint",
+  "Finding the unit history and past call-outs",
+  "Checking bylaws, insurance and charges",
+  "Draft reply, deadlines and contradictions flagged"
+ ],
+ "fields": [
+  {
+   "id": "date_decl",
+   "label": "Date of the insurance claim",
+   "type": "date",
+   "value": "2026-10-14",
+   "unit": "",
+   "hint": "Date planned by the manager: to review"
+  },
+  {
+   "id": "date_rep",
+   "label": "Date the reply is sent",
+   "type": "date",
+   "value": "2026-10-09",
+   "unit": "",
+   "hint": ""
+  },
+  {
+   "id": "rdv",
+   "label": "Slot offered for the roofer's visit",
+   "type": "text",
+   "value": "Thursday Oct 15, 2026, 9 to 11 am",
+   "unit": "",
+   "hint": ""
+  }
+ ],
+ "checks": [
+  {
+   "id": "Q1",
+   "label": "Insurance claim within 5 working days (by Oct 12, 2026)",
+   "ref": "E4",
+   "rule": {
+    "f": "date_decl",
+    "op": "<=",
+    "v": "2026-10-12",
+    "vf": null
+   },
+   "ok": "Claim filed {date_decl}",
+   "ko": "Claim filed {date_decl}: too late"
+  },
+  {
+   "id": "Q2",
+   "label": "Written reply within 8 days (by Oct 13, 2026)",
+   "ref": "E9",
+   "rule": {
+    "f": "date_rep",
+    "op": "<=",
+    "v": "2026-10-13",
+    "vf": null
+   },
+   "ok": "Reply sent {date_rep}",
+   "ko": "Reply sent {date_rep}: too late"
+  },
+  {
+   "id": "Q3",
+   "label": "Visit offered",
+   "ref": "E2",
+   "rule": {
+    "f": "rdv",
+    "op": "nonempty",
+    "v": null,
+    "vf": null
+   },
+   "ok": "Slot: {rdv}",
+   "ko": "Slot to offer"
+  }
+ ],
+ "output": {
+  "title": "Reply to Ms Garland: draft",
+  "sub": "Every statement links to its document. Tone, commitments and sending remain your decision.",
+  "sections": [
+   {
+    "h": "Analysis",
+    "items": [
+     {
+      "t": "Flat roof and waterproofing are common areas: the association is responsible for the repair.",
+      "cite": [
+       "E3",
+       "E2"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Three reports (Jun 14, Aug 2 and Oct 5, 2026); a single, temporary call-out on Sep 18, 2026.",
+      "cite": [
+       "E8",
+       "E2",
+       "E5"
+      ],
+      "todo": false
+     },
+     {
+      "t": "No claim filed with the building insurer: 5 working days to file, claim planned for {date_decl}.",
+      "cite": [
+       "E5",
+       "E4"
+      ],
+      "todo": false
+     },
+     {
+      "t": "The $1,240 charge is still due: the bylaws do not allow withholding charges because of a common-area defect.",
+      "cite": [
+       "E7",
+       "E6"
+      ],
+      "todo": false
+     }
+    ]
+   },
+   {
+    "h": "Draft letter",
+    "items": [
+     {
+      "t": "Dear Ms Garland, we have received your message of Oct 5, 2026 and we understand your frustration after three leaks.",
+      "cite": [
+       "E1",
+       "E8"
+      ],
+      "todo": false
+     },
+     {
+      "t": "The roofer came on Sep 18, 2026 for a temporary repair above your unit; the full replacement of the waterproofing is under way.",
+      "cite": [
+       "E2"
+      ],
+      "todo": false
+     },
+     {
+      "t": "We offer a visit with the roofer: {rdv}. The damage is being claimed with the building insurer on {date_decl}.",
+      "cite": [
+       "E4"
+      ],
+      "todo": false
+     },
+     {
+      "t": "For damage inside your unit, please send us photos and repair estimates: we will add them to the claim.",
+      "cite": [
+       "E4"
+      ],
+      "todo": false
+     },
+     {
+      "t": "The $1,240 charge remains due; a payment plan can be considered. [TO APPROVE by the manager].",
+      "cite": [
+       "E7",
+       "E6"
+      ],
+      "todo": true
+     },
+     {
+      "t": "Manager's signature: [TO COMPLETE].",
+      "cite": [],
+      "todo": true
+     }
+    ]
+   }
+  ]
+ },
+ "contradictions": [
+  {
+   "id": "C1",
+   "sev": "warn",
+   "title": "\"Nobody came\" although a call-out took place",
+   "sides": [
+    {
+     "e": "E1",
+     "label": "Owner's email",
+     "v": "Nobody came"
+    },
+    {
+     "e": "E2",
+     "label": "Roofer's report",
+     "v": "Call-out on Sep 18, 2026"
+    }
+   ],
+   "impact": "The reply should mention the call-out without dismissing the problem: it was only temporary.",
+   "action": "Acknowledge the delay and explain what happens next.",
+   "live": null
+  },
+  {
+   "id": "C2",
+   "sev": "bad",
+   "title": "Damage never claimed with the insurer",
+   "sides": [
+    {
+     "e": "E5",
+     "label": "Maintenance log",
+     "v": "No claim recorded"
+    },
+    {
+     "e": "E4",
+     "label": "Building insurance",
+     "v": "5 working days"
+    }
+   ],
+   "impact": "A late claim can reduce or void the payout.",
+   "action": "File the claim by Oct 12, 2026.",
+   "live": "Q1"
+  },
+  {
+   "id": "C3",
+   "sev": "warn",
+   "title": "Refusal to pay against the duty to pay charges",
+   "sides": [
+    {
+     "e": "E1",
+     "label": "Owner's email",
+     "v": "Refuses to pay $1,240"
+    },
+    {
+     "e": "E7",
+     "label": "Bylaws, clause 30",
+     "v": "Charges cannot be withheld"
+    }
+   ],
+   "impact": "Unpaid charges would trigger reminders and fees for the owner.",
+   "action": "Explain the rule tactfully and offer a payment plan.",
+   "live": null
+  },
+  {
+   "id": "C4",
+   "sev": "ok",
+   "title": "Source of the leak in a common area",
+   "sides": [
+    {
+     "e": "E2",
+     "label": "Roofer's report",
+     "v": "Membrane flashing detached"
+    },
+    {
+     "e": "E3",
+     "label": "Bylaws, clause 6",
+     "v": "Waterproofing is a common area"
+    }
+   ],
+   "impact": "No discrepancy.",
+   "action": "Nothing to do.",
+   "live": null
+  }
+ ],
+ "value": {
+  "case": "complaint by email, 7 documents to cross-check (64-page bylaws, building insurance, maintenance log, service charge notice).",
+  "rows": [
+   [
+    "Find the unit's history and documents",
+    30,
+    3
+   ],
+   [
+    "Check common areas, insurance and deadlines",
+    30,
+    4
+   ],
+   [
+    "Write an accurate, calm reply",
+    35,
+    6
+   ]
+  ],
+  "stats": [
+   [
+    "1",
+    "forgotten insurance claim caught before the deadline"
+   ],
+   [
+    "7",
+    "documents cross-checked for one reply"
+   ]
+  ],
+  "errors": [
+   "damage not claimed in time",
+   "a reply that would contradict the roofer's report"
+  ],
+  "total": [
+   95,
+   13
+  ]
+ },
+ "docx": "owner-complaint-reply-maple-court-draft"
+}

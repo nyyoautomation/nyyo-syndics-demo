@@ -1,0 +1,589 @@
+{
+ "id": "mtg",
+ "icon": "landmark",
+ "name": "General meeting minutes",
+ "short": "Attendance, proxies, votes → minutes",
+ "lead": "The attendance sheet, proxies and meeting notes are cross-checked against the bylaws and the meeting notice: ownership shares recounted, majorities checked resolution by resolution, then minutes ready to review. You settle every point before signing.",
+ "project": {
+  "title": "Annual general meeting of Oct 14, 2026, Maple Court (fictional)",
+  "meta": [
+   [
+    "Building",
+    "38 units, 10,000 ownership shares"
+   ],
+   [
+    "Present or represented",
+    "24 owners"
+   ],
+   [
+    "Proxies received",
+    "9"
+   ],
+   [
+    "Resolutions",
+    "6"
+   ]
+  ],
+  "firm": "Belmont Property Management (fictional)"
+ },
+ "sources": [
+  {
+   "id": "S1",
+   "name": "Meeting_Notice_2026.pdf",
+   "kind": "Meeting notice and agenda",
+   "pages": 6,
+   "unit": "p."
+  },
+  {
+   "id": "S2",
+   "name": "Attendance_Sheet.pdf",
+   "kind": "Signed attendance sheet",
+   "pages": 3,
+   "unit": "p."
+  },
+  {
+   "id": "S3",
+   "name": "Proxies.zip",
+   "kind": "Proxies received",
+   "pages": 9,
+   "unit": "files"
+  },
+  {
+   "id": "S4",
+   "name": "Bylaws.pdf",
+   "kind": "Association bylaws",
+   "pages": 64,
+   "unit": "p."
+  },
+  {
+   "id": "S5",
+   "name": "Roofing_Bid_Ridgeline.pdf",
+   "kind": "Roofing bid attached to the notice",
+   "pages": 4,
+   "unit": "p."
+  },
+  {
+   "id": "S6",
+   "name": "Secretary_Notes.txt",
+   "kind": "Secretary's meeting notes",
+   "pages": 2,
+   "unit": "p."
+  }
+ ],
+ "extracts": [
+  {
+   "id": "E1",
+   "src": "S1",
+   "page": 1,
+   "loc": "Mailing",
+   "text": "Notice sent by registered mail on Sep 21, 2026 for a meeting on Oct 14, 2026 at 6:30 pm."
+  },
+  {
+   "id": "E2",
+   "src": "S2",
+   "page": 3,
+   "loc": "Totals",
+   "text": "Present and represented: 24 owners out of 38, holding 6,912 of 10,000 ownership shares."
+  },
+  {
+   "id": "E3",
+   "src": "S3",
+   "page": 7,
+   "loc": "Proxy no. 7",
+   "text": "Mr Remy Archer (fictional), unit 31, 196 shares, gives his proxy to Ms Claire Fenton (fictional). Received Oct 13, 2026."
+  },
+  {
+   "id": "E4",
+   "src": "S4",
+   "page": 52,
+   "loc": "Clause 41 Proxies",
+   "text": "A proxy holder may not hold more than three proxies unless their own votes and those of the owners they represent do not exceed 10% of all votes."
+  },
+  {
+   "id": "E5",
+   "src": "S2",
+   "page": 2,
+   "loc": "Line 17",
+   "text": "Ms Claire Fenton: 312 shares of her own; proxies: Bellows (241), Carroll (178), Dunn (213), Archer (196). Total: 1,140 shares."
+  },
+  {
+   "id": "E6",
+   "src": "S1",
+   "page": 3,
+   "loc": "Resolution 6",
+   "text": "Waterproofing of the flat roof, Ridgeline Roofing (fictional) bid of $186,400 tax included. Absolute majority (majority of all owners' votes, clause 25)."
+  },
+  {
+   "id": "E7",
+   "src": "S5",
+   "page": 4,
+   "loc": "Summary",
+   "text": "Total: $175,600 before tax, tax 10% $17,560, i.e. $193,160 tax included."
+  },
+  {
+   "id": "E8",
+   "src": "S6",
+   "page": 1,
+   "loc": "Votes",
+   "text": "R1 to R3 (meeting officers): for 6,912. R4 2025 accounts: for 5,940, against 600, abstain 372. R5 2027 budget of $142,000: for 6,120, against 792. R6 roof: for 5,180, against 1,210, abstain 472."
+  },
+  {
+   "id": "E9",
+   "src": "S6",
+   "page": 2,
+   "loc": "Objection",
+   "text": "Before the R6 vote, Mr Bellows (fictional) objects to Mr Archer's proxy; the chair keeps the proxy."
+  },
+  {
+   "id": "E10",
+   "src": "S6",
+   "page": 2,
+   "loc": "Close",
+   "text": "No second vote on R6. Meeting closed at 8:55 pm."
+  },
+  {
+   "id": "E11",
+   "src": "S4",
+   "page": 58,
+   "loc": "Clause 46 Notification",
+   "text": "The minutes are sent to owners who voted against or were absent within one month of the meeting."
+  },
+  {
+   "id": "E12",
+   "src": "S5",
+   "page": 1,
+   "loc": "Header",
+   "text": "Bid no. 2026-118, version 2 of Sep 9, 2026, replacing version 1 of Jul 2, 2026."
+  },
+  {
+   "id": "E13",
+   "src": "S6",
+   "page": 1,
+   "loc": "Departure",
+   "text": "Mr Garner (fictional), 50 shares, leaves at 7:40 pm, before resolution 6."
+  },
+  {
+   "id": "E14",
+   "src": "S4",
+   "page": 53,
+   "loc": "Clause 42-1 Second vote",
+   "text": "If a proposal misses the absolute majority but gets at least one third of all votes, an immediate second vote may be held at simple majority."
+  },
+  {
+   "id": "E15",
+   "src": "S4",
+   "page": 50,
+   "loc": "Clause 38 Notice",
+   "text": "The meeting notice is sent at least 21 days before the meeting date."
+  }
+ ],
+ "steps": [
+  "Reading the meeting notice and the bylaws",
+  "Checking the attendance sheet and the 9 proxies",
+  "Recounting votes and majorities per resolution",
+  "Drafting the minutes, contradictions flagged"
+ ],
+ "fields": [
+  {
+   "id": "date_conv",
+   "label": "Date the notice was sent",
+   "type": "date",
+   "value": "2026-09-21",
+   "unit": "",
+   "hint": ""
+  },
+  {
+   "id": "pour_r6",
+   "label": "Votes \"for\" counted on resolution 6",
+   "type": "number",
+   "value": 5180,
+   "unit": "shares",
+   "hint": "Value from the meeting notes: review it given the disputed proxy"
+  },
+  {
+   "id": "montant_r6",
+   "label": "Amount voted on resolution 6",
+   "type": "money",
+   "value": 186400,
+   "unit": "",
+   "hint": "Amount on the agenda"
+  },
+  {
+   "id": "date_notif",
+   "label": "Minutes sent to owners against or absent",
+   "type": "date",
+   "value": "2026-11-06",
+   "unit": "",
+   "hint": ""
+  }
+ ],
+ "checks": [
+  {
+   "id": "Q1",
+   "label": "Notice sent at least 21 days before the meeting (by Sep 23, 2026)",
+   "ref": "E15",
+   "rule": {
+    "f": "date_conv",
+    "op": "<=",
+    "v": "2026-09-23",
+    "vf": null
+   },
+   "ok": "Sent {date_conv}",
+   "ko": "Sent {date_conv}: notice period missed"
+  },
+  {
+   "id": "Q2",
+   "label": "R6 votes without the invalid proxy (4,984 at most)",
+   "ref": "E4",
+   "rule": {
+    "f": "pour_r6",
+    "op": "<=",
+    "v": 4984,
+    "vf": null
+   },
+   "ok": "{pour_r6} shares counted",
+   "ko": "{pour_r6} shares: the 4th proxy is still counted"
+  },
+  {
+   "id": "Q3",
+   "label": "Absolute majority reached on R6 (5,001 shares)",
+   "ref": "E6",
+   "rule": {
+    "f": "pour_r6",
+    "op": ">=",
+    "v": 5001,
+    "vf": null
+   },
+   "ok": "{pour_r6}: passed",
+   "ko": "{pour_r6}: majority missed, resolution fails with no second vote"
+  },
+  {
+   "id": "Q4",
+   "label": "Minutes sent within one month (before Nov 14, 2026)",
+   "ref": "E11",
+   "rule": {
+    "f": "date_notif",
+    "op": "<",
+    "v": "2026-11-14",
+    "vf": null
+   },
+   "ok": "Sent {date_notif}",
+   "ko": "Sent {date_notif}: too late"
+  }
+ ],
+ "output": {
+  "title": "General meeting minutes: draft",
+  "sub": "Every statement links to the document and page it comes from. The count you keep and the final wording remain your decision.",
+  "sections": [
+   {
+    "h": "Attendance and proxies",
+    "items": [
+     {
+      "t": "Present and represented: 24 owners out of 38, holding 6,912 of 10,000 shares.",
+      "cite": [
+       "E2"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Notice sent {date_conv} for a meeting on Oct 14, 2026.",
+      "cite": [
+       "E1",
+       "E15"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Mr Archer's proxy (196 shares): Ms Fenton's 4th proxy, bringing her votes to 1,140 shares, above the 10% limit (1,000). To be left out of the count under clause 41.",
+      "cite": [
+       "E3",
+       "E5",
+       "E4"
+      ],
+      "todo": false
+     }
+    ]
+   },
+   {
+    "h": "Voting results",
+    "table": {
+     "head": [
+      "Resolution",
+      "Majority",
+      "For",
+      "Against",
+      "Result"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "R1 to R3 · Meeting officers",
+        "Simple",
+        "6,912",
+        "0",
+        "Passed"
+       ],
+       "cite": [
+        "E8"
+       ],
+       "best": null,
+       "flag": {}
+      },
+      {
+       "cells": [
+        "R4 · 2025 accounts",
+        "Simple",
+        "5,940",
+        "600",
+        "Passed"
+       ],
+       "cite": [
+        "E8"
+       ],
+       "best": null,
+       "flag": {}
+      },
+      {
+       "cells": [
+        "R5 · 2027 budget ($142,000)",
+        "Simple",
+        "6,120",
+        "792",
+        "Passed"
+       ],
+       "cite": [
+        "E8"
+       ],
+       "best": null,
+       "flag": {}
+      },
+      {
+       "cells": [
+        "R6 · Flat roof waterproofing",
+        "Absolute",
+        "{pour_r6}",
+        "1,210",
+        "To decide: threshold 5,001"
+       ],
+       "cite": [
+        "E8",
+        "E6",
+        "E9"
+       ],
+       "best": null,
+       "flag": {
+        "2": "includes 196 via the Archer proxy, disputed at the meeting",
+        "4": "4,984 without the disputed proxy"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "h": "Resolution 6: roof works",
+    "items": [
+     {
+      "t": "Amount on the agenda and voted: {montant_r6}. The attached bid (version 2) totals $193,160 tax included.",
+      "cite": [
+       "E6",
+       "E7",
+       "E12"
+      ],
+      "todo": false
+     },
+     {
+      "t": "To record in the minutes: Mr Bellows objected to Mr Archer's proxy; the chair kept it.",
+      "cite": [
+       "E9"
+      ],
+      "todo": false
+     },
+     {
+      "t": "No simple-majority second vote was held: without the disputed proxy, the resolution does not pass.",
+      "cite": [
+       "E10",
+       "E14"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Mr Garner (50 shares) left before R6: the R6 vote total (6,862) is consistent.",
+      "cite": [
+       "E13",
+       "E8"
+      ],
+      "todo": false
+     }
+    ]
+   },
+   {
+    "h": "Notices and notification",
+    "items": [
+     {
+      "t": "Minutes sent to owners against or absent within one month; planned for {date_notif}.",
+      "cite": [
+       "E11"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Names of owners against or absent per resolution: [TO COMPLETE after your decision on R6].",
+      "cite": [],
+      "todo": true
+     },
+     {
+      "t": "Signatures of the chair, the teller and the secretary: [TO COMPLETE].",
+      "cite": [],
+      "todo": true
+     }
+    ]
+   }
+  ]
+ },
+ "contradictions": [
+  {
+   "id": "C1",
+   "sev": "bad",
+   "title": "Mr Archer's proxy exceeds the proxy limit",
+   "sides": [
+    {
+     "e": "E5",
+     "label": "Attendance sheet, line 17",
+     "v": "4 proxies, 1,140 shares"
+    },
+    {
+     "e": "E4",
+     "label": "Bylaws, clause 41",
+     "v": "3 proxies max above 10% (1,000)"
+    }
+   ],
+   "impact": "The 196 shares voted through this proxy are invalid: without them, R6 drops to 4,984 votes, below the 5,001 threshold.",
+   "action": "Remove the proxy from the count (enter 4,984) and decide how the minutes record it.",
+   "live": "Q2"
+  },
+  {
+   "id": "C2",
+   "sev": "bad",
+   "title": "Resolution 6 amount differs from the attached bid",
+   "sides": [
+    {
+     "e": "E6",
+     "label": "Agenda, resolution 6",
+     "v": "$186,400"
+    },
+    {
+     "e": "E7",
+     "label": "Ridgeline bid, version 2",
+     "v": "$193,160"
+    }
+   ],
+   "impact": "Owners voted $6,760 less than the attached bid: the contract cannot be signed as is.",
+   "action": "Check whether bid version 1 still stands; otherwise plan a new resolution.",
+   "live": null
+  },
+  {
+   "id": "C3",
+   "sev": "warn",
+   "title": "No second vote although the bylaws allowed one",
+   "sides": [
+    {
+     "e": "E10",
+     "label": "Meeting notes",
+     "v": "No second vote"
+    },
+    {
+     "e": "E14",
+     "label": "Bylaws, clause 42-1",
+     "v": "Second vote from one third of votes"
+    }
+   ],
+   "impact": "If the proxy is removed, the resolution fails and the works are postponed.",
+   "action": "Decide with the board: minutes as they stand or a new meeting.",
+   "live": null
+  },
+  {
+   "id": "C4",
+   "sev": "ok",
+   "title": "R6 vote total consistent with departures",
+   "sides": [
+    {
+     "e": "E2",
+     "label": "Attendance sheet",
+     "v": "6,912 shares present"
+    },
+    {
+     "e": "E13",
+     "label": "Meeting notes",
+     "v": "50 shares left before R6"
+    }
+   ],
+   "impact": "6,912 - 50 = 6,862 = 5,180 + 1,210 + 472.",
+   "action": "Nothing to do.",
+   "live": null
+  },
+  {
+   "id": "C5",
+   "sev": "ok",
+   "title": "Notice period met",
+   "sides": [
+    {
+     "e": "E1",
+     "label": "Meeting notice",
+     "v": "Sent Sep 21, 2026"
+    },
+    {
+     "e": "date_conv",
+     "label": "Your input",
+     "v": "{date_conv}"
+    }
+   ],
+   "impact": "No discrepancy.",
+   "action": "Nothing to do.",
+   "live": "Q1"
+  }
+ ],
+ "value": {
+  "case": "annual meeting, 38 units, 24 owners present or represented, 9 proxies, 6 resolutions, 64-page bylaws.",
+  "rows": [
+   [
+    "Check attendance, proxies and ownership shares",
+    50,
+    6
+   ],
+   [
+    "Recount votes and majorities per resolution",
+    45,
+    5
+   ],
+   [
+    "Draft the minutes",
+    90,
+    12
+   ],
+   [
+    "Re-read against the notice, the bid and the bylaws",
+    30,
+    7
+   ]
+  ],
+  "stats": [
+   [
+    "4",
+    "points to settle before signing the minutes, with sources"
+   ],
+   [
+    "6/6",
+    "resolutions recounted on ownership shares"
+   ]
+  ],
+  "errors": [
+   "an invalid proxy that flips a works vote",
+   "an amount voted that differs from the attached bid"
+  ],
+  "total": [
+   215,
+   30
+  ]
+ },
+ "docx": "general-meeting-minutes-maple-court-draft"
+}

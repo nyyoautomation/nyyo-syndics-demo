@@ -1,0 +1,584 @@
+{
+ "id": "trv",
+ "icon": "hammer",
+ "name": "Contractor bid comparison",
+ "short": "3 bids vs specification → board note",
+ "lead": "The facade bids are matched item by item to the architect's specification: areas, options, performance, insurance and validity. The board gets a sourced comparison; the tool does not choose the contractor.",
+ "project": {
+  "title": "Facade renovation and rear wall insulation, Maple Court (fictional)",
+  "meta": [
+   [
+    "Area",
+    "1,420 m² of facades"
+   ],
+   [
+    "Contractors asked",
+    "3 (fictional)"
+   ],
+   [
+    "Board budget",
+    "$300,000"
+   ],
+   [
+    "Meeting planned",
+    "Mar 10, 2027"
+   ]
+  ],
+  "firm": "Belmont Property Management (fictional)"
+ },
+ "sources": [
+  {
+   "id": "S1",
+   "name": "Facade_Specification.pdf",
+   "kind": "Works specification (architect)",
+   "pages": 18,
+   "unit": "p."
+  },
+  {
+   "id": "S2",
+   "name": "Bid_Northgate.pdf",
+   "kind": "Northgate Facades bid (fictional)",
+   "pages": 7,
+   "unit": "p."
+  },
+  {
+   "id": "S3",
+   "name": "Bid_Eastline.pdf",
+   "kind": "Eastline Renovation bid (fictional)",
+   "pages": 5,
+   "unit": "p."
+  },
+  {
+   "id": "S4",
+   "name": "Bid_Stoneworks.pdf",
+   "kind": "Stoneworks Studio bid (fictional)",
+   "pages": 9,
+   "unit": "p."
+  },
+  {
+   "id": "S5",
+   "name": "Insurance_Certificates.zip",
+   "kind": "Contractor liability insurance certificates",
+   "pages": 3,
+   "unit": "files"
+  },
+  {
+   "id": "S6",
+   "name": "Board_Minutes_Sep.pdf",
+   "kind": "Board meeting notes",
+   "pages": 2,
+   "unit": "p."
+  }
+ ],
+ "extracts": [
+  {
+   "id": "E1",
+   "src": "S1",
+   "page": 4,
+   "loc": "Section 2 Areas",
+   "text": "Facade area to treat: 1,420 m² (street and rear). Scaffolding included, with balcony protection."
+  },
+  {
+   "id": "E2",
+   "src": "S1",
+   "page": 9,
+   "loc": "Section 5 Insulation",
+   "text": "Rear facade: external wall insulation on 610 m², thermal resistance R of 3.7 or more."
+  },
+  {
+   "id": "E3",
+   "src": "S2",
+   "page": 2,
+   "loc": "Summary",
+   "text": "1,420 m²; scaffolding included; rear wall insulation 610 m², R = 3.7; total $312,800; duration 14 weeks."
+  },
+  {
+   "id": "E4",
+   "src": "S3",
+   "page": 2,
+   "loc": "Summary",
+   "text": "1,280 m²; scaffolding included; rear wall insulation 610 m², R = 3.7; total $268,900; duration 10 weeks."
+  },
+  {
+   "id": "E5",
+   "src": "S4",
+   "page": 3,
+   "loc": "Summary",
+   "text": "1,420 m²; scaffolding optional (+$38,500); rear wall insulation 610 m², R = 3.2; total $279,400 without the option; duration 12 weeks."
+  },
+  {
+   "id": "E6",
+   "src": "S5",
+   "page": 1,
+   "loc": "Eastline",
+   "text": "10-year liability cover valid Jan 1 to Dec 31, 2026. Trades covered: facade renovation, painting. External insulation not listed."
+  },
+  {
+   "id": "E7",
+   "src": "S5",
+   "page": 2,
+   "loc": "Northgate",
+   "text": "10-year liability cover valid Jan 1 to Dec 31, 2026. Trades covered: facade renovation, external wall insulation."
+  },
+  {
+   "id": "E8",
+   "src": "S5",
+   "page": 3,
+   "loc": "Stoneworks",
+   "text": "10-year liability cover valid Apr 1, 2026 to Mar 31, 2027. Trades covered: facade renovation, external insulation, masonry."
+  },
+  {
+   "id": "E9",
+   "src": "S6",
+   "page": 1,
+   "loc": "Item 3",
+   "text": "Budget approved by the board: $300,000 at most. Owners' vote on Mar 10, 2027, works to start in spring 2027."
+  },
+  {
+   "id": "E10",
+   "src": "S4",
+   "page": 8,
+   "loc": "Validity",
+   "text": "Offer valid for 3 months from Sep 15, 2026."
+  },
+  {
+   "id": "E11",
+   "src": "S2",
+   "page": 6,
+   "loc": "Validity",
+   "text": "Offer valid for 6 months from Oct 1, 2026."
+  },
+  {
+   "id": "E12",
+   "src": "S3",
+   "page": 5,
+   "loc": "Validity",
+   "text": "Offer valid until Apr 30, 2027."
+  }
+ ],
+ "steps": [
+  "Reading the architect's specification",
+  "Extracting the 3 bids item by item",
+  "Checking insurance certificates and validity",
+  "Comparison against the specification, contradictions flagged"
+ ],
+ "fields": [
+  {
+   "id": "budget",
+   "label": "Budget approved by the board",
+   "type": "money",
+   "value": 300000,
+   "unit": "",
+   "hint": ""
+  },
+  {
+   "id": "offre",
+   "label": "Amount of the bid put to the owners",
+   "type": "money",
+   "value": 312800,
+   "unit": "",
+   "hint": "Northgate bid, the only complete one so far"
+  },
+  {
+   "id": "date_ag",
+   "label": "Date of the owners' meeting that will vote",
+   "type": "date",
+   "value": "2027-03-10",
+   "unit": "",
+   "hint": ""
+  },
+  {
+   "id": "motif",
+   "label": "Reason for the proposal",
+   "type": "text",
+   "value": "Only bid matching the specification on every item, with liability cover that includes the insulation",
+   "unit": "",
+   "hint": ""
+  }
+ ],
+ "checks": [
+  {
+   "id": "Q1",
+   "label": "Bid put to the owners within the board budget",
+   "ref": "E9",
+   "rule": {
+    "f": "offre",
+    "op": "<=",
+    "v": null,
+    "vf": "budget"
+   },
+   "ok": "{offre}: within the {budget} budget",
+   "ko": "{offre}: above the {budget} budget"
+  },
+  {
+   "id": "Q2",
+   "label": "Northgate bid still valid on the meeting date (Apr 1, 2027)",
+   "ref": "E11",
+   "rule": {
+    "f": "date_ag",
+    "op": "<=",
+    "v": "2027-04-01",
+    "vf": null
+   },
+   "ok": "Meeting on {date_ag}: bid valid",
+   "ko": "Meeting on {date_ag}: bid expired"
+  },
+  {
+   "id": "Q3",
+   "label": "Proposal reasoned",
+   "ref": "E1",
+   "rule": {
+    "f": "motif",
+    "op": "nonempty",
+    "v": null,
+    "vf": null
+   },
+   "ok": "Reason recorded",
+   "ko": "Reason to write"
+  }
+ ],
+ "output": {
+  "title": "Facade bid comparison: draft for the board",
+  "sub": "Every value links to the page of the bid, specification or certificate. Choosing the contractor is up to the board and the owners.",
+  "sections": [
+   {
+    "h": "Comparison against the specification",
+    "table": {
+     "head": [
+      "Item",
+      "Northgate Facades",
+      "Eastline Renovation",
+      "Stoneworks Studio"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Total price",
+        "$312,800",
+        "$268,900",
+        "$317,900 with scaffolding"
+       ],
+       "cite": [
+        "E3",
+        "E4",
+        "E5"
+       ],
+       "best": 2,
+       "flag": {
+        "3": "$279,400 without the optional scaffolding"
+       }
+      },
+      {
+       "cells": [
+        "Area covered",
+        "1,420 m²",
+        "1,280 m²",
+        "1,420 m²"
+       ],
+       "cite": [
+        "E1",
+        "E3",
+        "E4",
+        "E5"
+       ],
+       "best": null,
+       "flag": {
+        "2": "140 m² less than the specification"
+       }
+      },
+      {
+       "cells": [
+        "Scaffolding",
+        "Included",
+        "Included",
+        "Option +$38,500"
+       ],
+       "cite": [
+        "E1",
+        "E3",
+        "E4",
+        "E5"
+       ],
+       "best": null,
+       "flag": {
+        "3": "required by the specification, section 2"
+       }
+      },
+      {
+       "cells": [
+        "Rear wall insulation",
+        "R = 3.7",
+        "R = 3.7",
+        "R = 3.2"
+       ],
+       "cite": [
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+       ],
+       "best": null,
+       "flag": {
+        "3": "below the required R of 3.7"
+       }
+      },
+      {
+       "cells": [
+        "Liability insurance",
+        "Covers insulation",
+        "Insulation not covered",
+        "Covers insulation"
+       ],
+       "cite": [
+        "E6",
+        "E7",
+        "E8"
+       ],
+       "best": null,
+       "flag": {
+        "2": "trade missing from the certificate"
+       }
+      },
+      {
+       "cells": [
+        "Works duration",
+        "14 weeks",
+        "10 weeks",
+        "12 weeks"
+       ],
+       "cite": [
+        "E3",
+        "E4",
+        "E5"
+       ],
+       "best": 2,
+       "flag": {}
+      },
+      {
+       "cells": [
+        "Offer valid until",
+        "Apr 1, 2027",
+        "Apr 30, 2027",
+        "Dec 15, 2026"
+       ],
+       "cite": [
+        "E10",
+        "E11",
+        "E12"
+       ],
+       "best": null,
+       "flag": {
+        "3": "expires before the Mar 10, 2027 meeting"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "h": "Proposal to the board",
+    "items": [
+     {
+      "t": "Most complete bid: Northgate Facades, {offre}. Reason: {motif}.",
+      "cite": [
+       "E3",
+       "E7",
+       "E1"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Eastline is the cheapest, but prices 140 m² less and its liability cover excludes the insulation: have it completed before comparing.",
+      "cite": [
+       "E4",
+       "E6",
+       "E1"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Stoneworks comes to $317,900 with the required scaffolding, offers R = 3.2 and its offer will have expired on the meeting date.",
+      "cite": [
+       "E5",
+       "E2",
+       "E10"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Board budget: {budget}. The bid put forward exceeds it by $12,800: approve or renegotiate.",
+      "cite": [
+       "E9",
+       "E3"
+      ],
+      "todo": false
+     }
+    ]
+   },
+   {
+    "h": "Next steps",
+    "items": [
+     {
+      "t": "Requests to send: corrected areas and a complete certificate from Eastline; a validity extension from Stoneworks. [TO SEND after your review].",
+      "cite": [
+       "E4",
+       "E6",
+       "E10"
+      ],
+      "todo": true
+     },
+     {
+      "t": "Draft resolution for the {date_ag} meeting: [TO COMPLETE, check the required majority in your bylaws].",
+      "cite": [],
+      "todo": true
+     }
+    ]
+   }
+  ]
+ },
+ "contradictions": [
+  {
+   "id": "C1",
+   "sev": "bad",
+   "title": "Eastline: priced area smaller than the specification",
+   "sides": [
+    {
+     "e": "E4",
+     "label": "Eastline bid",
+     "v": "1,280 m²"
+    },
+    {
+     "e": "E1",
+     "label": "Specification, section 2",
+     "v": "1,420 m²"
+    }
+   ],
+   "impact": "The lowest price covers 10% less facade: the comparison is skewed.",
+   "action": "Ask for a bid on 1,420 m².",
+   "live": null
+  },
+  {
+   "id": "C2",
+   "sev": "bad",
+   "title": "Eastline: liability cover without external insulation",
+   "sides": [
+    {
+     "e": "E4",
+     "label": "Eastline bid",
+     "v": "Insulation on 610 m² priced"
+    },
+    {
+     "e": "E6",
+     "label": "Insurance certificate",
+     "v": "Facade and painting only"
+    }
+   ],
+   "impact": "If the insulation fails, the building would not be covered.",
+   "action": "Require a certificate covering the trade, or set the bid aside.",
+   "live": null
+  },
+  {
+   "id": "C3",
+   "sev": "warn",
+   "title": "Stoneworks: insulation performance too low",
+   "sides": [
+    {
+     "e": "E5",
+     "label": "Stoneworks bid",
+     "v": "R = 3.2"
+    },
+    {
+     "e": "E2",
+     "label": "Specification, section 5",
+     "v": "R of 3.7 or more"
+    }
+   ],
+   "impact": "The bid does not match the specification.",
+   "action": "Ask for a variant at R 3.7 or more.",
+   "live": null
+  },
+  {
+   "id": "C4",
+   "sev": "warn",
+   "title": "Stoneworks: offer expired by the meeting date",
+   "sides": [
+    {
+     "e": "E10",
+     "label": "Bid, validity",
+     "v": "Until Dec 15, 2026"
+    },
+    {
+     "e": "date_ag",
+     "label": "Your input",
+     "v": "{date_ag}"
+    }
+   ],
+   "impact": "Owners would vote on a price the contractor no longer stands by.",
+   "action": "Ask for a written extension.",
+   "live": null
+  },
+  {
+   "id": "C5",
+   "sev": "warn",
+   "title": "Bid put forward is above the board budget",
+   "sides": [
+    {
+     "e": "E3",
+     "label": "Northgate bid",
+     "v": "$312,800"
+    },
+    {
+     "e": "budget",
+     "label": "Your input",
+     "v": "{budget}"
+    }
+   ],
+   "impact": "The board set a ceiling: going over it without approval can block the vote.",
+   "action": "Get the overrun approved or renegotiate.",
+   "live": "Q1"
+  }
+ ],
+ "value": {
+  "case": "facade renovation of 1,420 m², 18-page specification, 3 bids (21 pages), 3 insurance certificates.",
+  "rows": [
+   [
+    "Read the bids and match them to the specification",
+    100,
+    10
+   ],
+   [
+    "Check areas, options and performance",
+    40,
+    5
+   ],
+   [
+    "Check certificates and validity dates",
+    25,
+    3
+   ],
+   [
+    "Write the comparison for the board",
+    45,
+    8
+   ]
+  ],
+  "stats": [
+   [
+    "5",
+    "discrepancies caught before the board meeting, with sources"
+   ],
+   [
+    "3/3",
+    "bids matched to the same specification"
+   ]
+  ],
+  "errors": [
+   "a cheaper bid on an incomplete area",
+   "liability cover that leaves out the insulation"
+  ],
+  "total": [
+   210,
+   26
+  ]
+ },
+ "docx": "facade-bid-comparison-maple-court-draft"
+}

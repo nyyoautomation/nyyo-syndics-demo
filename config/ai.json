@@ -1,0 +1,18 @@
+{
+  "_note": "AI defaults for the paid setup (the public demo is a replay and calls no model). Provider, model and hosting region are configured per firm at setup. Cost figures are estimates to be confirmed by measurement during the pilot.",
+  "default_model": {
+    "provider": "standard-default",
+    "model": "cost-efficient-standard",
+    "hosting_region": "customer-choice"
+  },
+  "premium_models_by_default": false,
+  "premium_model_policy": "opt-in per firm only, never the default",
+  "cost_alert": {
+    "scope": "per_firm",
+    "metric": "ai_cost_per_deliverable",
+    "threshold": 1.0,
+    "threshold_currency": "set per firm (account currency)",
+    "action": "flag the deliverable in the firm's dashboard and notify the firm admin; nothing is blocked automatically",
+    "status": "measurement to confirm in pilot"
+  }
+}
