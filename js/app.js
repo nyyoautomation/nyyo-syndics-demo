@@ -4,7 +4,7 @@
   const LANG = /^fr/i.test(document.documentElement.lang || "") ? "fr" : "en";
   const BASE = document.body.dataset.base || "./data/" + LANG + "/";
   const ORDER = ["mtg", "trv", "rec"];
-  const loc = LANG === "fr" ? "fr-FR" : "en-US";
+  const loc = "en-US";
   const SEP = LANG === "fr" ? " :" : ":";
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
