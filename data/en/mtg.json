@@ -185,7 +185,7 @@
  ],
  "fields": [
   {
-   "id": "date_conv",
+   "id": "notice_date",
    "label": "Date the notice was sent",
    "type": "date",
    "value": "2026-09-21",
@@ -193,7 +193,7 @@
    "hint": ""
   },
   {
-   "id": "pour_r6",
+   "id": "votes_for_r6",
    "label": "Votes \"for\" counted on resolution 6",
    "type": "number",
    "value": 5180,
@@ -201,7 +201,7 @@
    "hint": "Value from the meeting notes: review it given the disputed proxy"
   },
   {
-   "id": "montant_r6",
+   "id": "amount_r6",
    "label": "Amount voted on resolution 6",
    "type": "money",
    "value": 186400,
@@ -223,39 +223,39 @@
    "label": "Notice sent at least 21 days before the meeting (by Sep 23, 2026)",
    "ref": "E15",
    "rule": {
-    "f": "date_conv",
+    "f": "notice_date",
     "op": "<=",
     "v": "2026-09-23",
     "vf": null
    },
-   "ok": "Sent {date_conv}",
-   "ko": "Sent {date_conv}: notice period missed"
+   "ok": "Sent {notice_date}",
+   "ko": "Sent {notice_date}: notice period missed"
   },
   {
    "id": "Q2",
    "label": "R6 votes without the invalid proxy (4,984 at most)",
    "ref": "E4",
    "rule": {
-    "f": "pour_r6",
+    "f": "votes_for_r6",
     "op": "<=",
     "v": 4984,
     "vf": null
    },
-   "ok": "{pour_r6} shares counted",
-   "ko": "{pour_r6} shares: the 4th proxy is still counted"
+   "ok": "{votes_for_r6} shares counted",
+   "ko": "{votes_for_r6} shares: the 4th proxy is still counted"
   },
   {
    "id": "Q3",
    "label": "Absolute majority reached on R6 (5,001 shares)",
    "ref": "E6",
    "rule": {
-    "f": "pour_r6",
+    "f": "votes_for_r6",
     "op": ">=",
     "v": 5001,
     "vf": null
    },
-   "ok": "{pour_r6}: passed",
-   "ko": "{pour_r6}: majority missed, resolution fails with no second vote"
+   "ok": "{votes_for_r6}: passed",
+   "ko": "{votes_for_r6}: majority missed, resolution fails with no second vote"
   },
   {
    "id": "Q4",
@@ -286,7 +286,7 @@
       "todo": false
      },
      {
-      "t": "Notice sent {date_conv} for a meeting on Oct 14, 2026.",
+      "t": "Notice sent {notice_date} for a meeting on Oct 14, 2026.",
       "cite": [
        "E1",
        "E15"
@@ -361,7 +361,7 @@
        "cells": [
         "R6 · Flat roof waterproofing",
         "Absolute",
-        "{pour_r6}",
+        "{votes_for_r6}",
         "1,210",
         "To decide: threshold 5,001"
        ],
@@ -383,7 +383,7 @@
     "h": "Resolution 6: roof works",
     "items": [
      {
-      "t": "Amount on the agenda and voted: {montant_r6}. The attached bid (version 2) totals $193,160 tax included.",
+      "t": "Amount on the agenda and voted: {amount_r6}. The attached bid (version 2) totals $193,160 tax included.",
       "cite": [
        "E6",
        "E7",
@@ -532,9 +532,9 @@
      "v": "Sent Sep 21, 2026"
     },
     {
-     "e": "date_conv",
+     "e": "notice_date",
      "label": "Your input",
-     "v": "{date_conv}"
+     "v": "{notice_date}"
     }
    ],
    "impact": "No discrepancy.",

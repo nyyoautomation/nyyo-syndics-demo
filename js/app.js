@@ -2,7 +2,7 @@
 (function () {
   "use strict";
   const BASE = document.body.dataset.base || "./data/en/";
-  const ORDER = ["mtg", "trv", "rec"];
+  const ORDER = ["mtg", "bids", "complaint"];
   const loc = "en-US";
   const SEP = ":";
   const $ = (s, r = document) => r.querySelector(s);

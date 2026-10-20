@@ -1,5 +1,5 @@
 {
- "id": "trv",
+ "id": "bids",
  "icon": "hammer",
  "name": "Contractor bid comparison",
  "short": "3 bids vs specification → board note",
@@ -172,7 +172,7 @@
    "hint": ""
   },
   {
-   "id": "offre",
+   "id": "bid_amount",
    "label": "Amount of the bid put to the owners",
    "type": "money",
    "value": 312800,
@@ -180,7 +180,7 @@
    "hint": "Northgate bid, the only complete one so far"
   },
   {
-   "id": "date_ag",
+   "id": "meeting_date",
    "label": "Date of the owners' meeting that will vote",
    "type": "date",
    "value": "2027-03-10",
@@ -188,7 +188,7 @@
    "hint": ""
   },
   {
-   "id": "motif",
+   "id": "reason",
    "label": "Reason for the proposal",
    "type": "text",
    "value": "Only bid matching the specification on every item, with liability cover that includes the insulation",
@@ -202,33 +202,33 @@
    "label": "Bid put to the owners within the board budget",
    "ref": "E9",
    "rule": {
-    "f": "offre",
+    "f": "bid_amount",
     "op": "<=",
     "v": null,
     "vf": "budget"
    },
-   "ok": "{offre}: within the {budget} budget",
-   "ko": "{offre}: above the {budget} budget"
+   "ok": "{bid_amount}: within the {budget} budget",
+   "ko": "{bid_amount}: above the {budget} budget"
   },
   {
    "id": "Q2",
    "label": "Northgate bid still valid on the meeting date (Apr 1, 2027)",
    "ref": "E11",
    "rule": {
-    "f": "date_ag",
+    "f": "meeting_date",
     "op": "<=",
     "v": "2027-04-01",
     "vf": null
    },
-   "ok": "Meeting on {date_ag}: bid valid",
-   "ko": "Meeting on {date_ag}: bid expired"
+   "ok": "Meeting on {meeting_date}: bid valid",
+   "ko": "Meeting on {meeting_date}: bid expired"
   },
   {
    "id": "Q3",
    "label": "Proposal reasoned",
    "ref": "E1",
    "rule": {
-    "f": "motif",
+    "f": "reason",
     "op": "nonempty",
     "v": null,
     "vf": null
@@ -378,7 +378,7 @@
     "h": "Proposal to the board",
     "items": [
      {
-      "t": "Most complete bid: Northgate Facades, {offre}. Reason: {motif}.",
+      "t": "Most complete bid: Northgate Facades, {bid_amount}. Reason: {reason}.",
       "cite": [
        "E3",
        "E7",
@@ -427,7 +427,7 @@
       "todo": true
      },
      {
-      "t": "Draft resolution for the {date_ag} meeting: [TO COMPLETE, check the required majority in your bylaws].",
+      "t": "Draft resolution for the {meeting_date} meeting: [TO COMPLETE, check the required majority in your bylaws].",
       "cite": [],
       "todo": true
      }
@@ -507,9 +507,9 @@
      "v": "Until Dec 15, 2026"
     },
     {
-     "e": "date_ag",
+     "e": "meeting_date",
      "label": "Your input",
-     "v": "{date_ag}"
+     "v": "{meeting_date}"
     }
    ],
    "impact": "Owners would vote on a price the contractor no longer stands by.",
